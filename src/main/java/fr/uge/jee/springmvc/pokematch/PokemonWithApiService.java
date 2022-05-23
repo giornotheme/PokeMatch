@@ -16,7 +16,7 @@ public class PokemonWithApiService {
 
             return jsonObject.path("name").asText();
         }catch (Exception e){
-            System.out.println("Something wrong with OMdb API" + e.getMessage());
+            System.out.println("Something wrong with pokeAPI" + e.getMessage());
             return e.getMessage();
         }
 
