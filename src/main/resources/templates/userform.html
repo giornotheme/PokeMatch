@@ -16,5 +16,6 @@
 <p th:text="${nom != null or prenom != null} ? ${nom +' '+ prenom} : 'who are you'" ></p>
 <p th:text="${hashcodeUser != null} ? ${hashcodeUser}"></p>
 <p th:text="${pokemonName != null} ? ${pokemonName}"></p>
+<p th:list="${listPokemonFetiche != null} ? ${listPokemonFetiche}"></p>
 </body>
 </html>
