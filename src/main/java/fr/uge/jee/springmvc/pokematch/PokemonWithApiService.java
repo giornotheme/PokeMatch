@@ -2,6 +2,7 @@ package fr.uge.jee.springmvc.pokematch;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestOperations;
 import org.springframework.web.client.RestTemplate;
 
 public class PokemonWithApiService {
@@ -9,7 +10,7 @@ public class PokemonWithApiService {
 
     public String getPokemon(int id){
         try{
-            RestTemplate restTemplate = new RestTemplate();
+            RestOperations restTemplate = new RestTemplate();
 
             ResponseEntity<ObjectNode> response = restTemplate.getForEntity(apiUrl + id + "/", ObjectNode.class);
             ObjectNode jsonObject = response.getBody();
